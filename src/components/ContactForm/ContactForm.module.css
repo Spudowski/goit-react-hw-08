@@ -1,0 +1,35 @@
+.form {
+    margin-bottom: 48px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container label {
+    margin-bottom: 5px;
+}
+
+.field {
+    width: 320px;
+    height: 40px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    border: 1px solid hsl(0, 1%, 29%);
+    padding-left: 12px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.error {
+    margin-bottom: 12px;
+    color: hsla(0, 100%, 65%, 0.8);
+}

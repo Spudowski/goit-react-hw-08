@@ -1,0 +1,10 @@
+.searchbox {
+    width: 320px;
+    height: 40px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    background-color: rgb(65, 65, 65);
+    border: 1px solid rgb(116, 116, 116);
+    padding-left: 12px;
+}
