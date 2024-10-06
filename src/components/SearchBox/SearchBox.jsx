@@ -11,13 +11,17 @@ const SearchBox = ({ isActive }) => {
   };
 
   return (
-    isActive &&
-    <input className={styles.searchbox}
-      type="text"
-      placeholder="Search contacts..."
-      value={filter}
-      onChange={handleChange}
-    />
+    isActive && (
+      <div className={styles.cont}>
+        <input
+          className={styles.searchbox}
+          type="text"
+          placeholder="Search contacts..."
+          value={filter}
+          onChange={handleChange}
+        />
+      </div>
+    )
   );
 };
 

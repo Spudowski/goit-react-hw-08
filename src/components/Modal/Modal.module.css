@@ -1,0 +1,66 @@
+.modalBackdrop {
+    width: 300px;
+    height: fit-content;
+    background: rgb(54, 54, 54);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 20px 20px 30px #00000077;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(15px);
+}
+
+.modalContent {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.btnCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.confirmButton,
+.cancelButton {
+    width: 50%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.5s ease-in-out;
+}
+
+.confirmButton:hover {
+    background-color: rgb(87, 201, 87);
+    color: rgba(0, 0, 0, 0.575);
+}
+
+.cancelButton:hover {
+    background-color: rgb(201, 110, 87);
+    color: rgba(0, 0, 0, 0.575);
+}
+
+.confirmButton:active {
+    background-color: rgb(87, 201, 87);
+    color: rgba(0, 0, 0, 0.575);
+    border: none;
+}
+
+.cancelButton:active {
+    background-color: rgb(201, 110, 87);
+    color: rgba(0, 0, 0, 0.575);
+    border: none;
+}

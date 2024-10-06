@@ -4,6 +4,81 @@
   gap: 12px;
 }
 
+.welcome {
+  font-weight: 700;
+}
+
 .username {
   font-weight: 700;
+  color: #6bc28f;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: rgb(247, 78, 78);
+}
+
+.sign {
+  transition-duration: .3s;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign svg {
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: .3s;
+}
+
+.btn:hover {
+  width: 125px;
+  border-radius: 40px;
+  transition-duration: .5s;
+}
+
+.btn:hover .sign {
+  width: 30%;
+  transition-duration: .3s;
+}
+
+.btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: .3s;
+  padding-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* button click effect*/
+.btn:active {
+  transform: translate(2px, 2px);
 }

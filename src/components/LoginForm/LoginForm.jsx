@@ -36,25 +36,41 @@ export const LoginForm = () => {
       onSubmit={handleSubmit}
     >
       {({ isSubmitting }) => (
-        <Form className={css.form} autoComplete="off">
-          <label className={css.label}>
-            Email
-            <Field type="email" name="email" />
-            <ErrorMessage name="email" component="div" className={css.error} />
-          </label>
-          <label className={css.label}>
-            Password
-            <Field type="password" name="password" />
-            <ErrorMessage
-              name="password"
-              component="div"
-              className={css.error}
-            />
-          </label>
-          <button type="submit" disabled={isSubmitting}>
-            Log In
-          </button>
-        </Form>
+        <div className={css.container}>
+          <Form className={css.form} autoComplete="off">
+            <label className={css.label}>
+              <span className={css.text}>Email</span>
+              <Field
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                className={css.field}
+              />
+              <ErrorMessage
+                name="email"
+                component="div"
+                className={css.error}
+              />
+            </label>
+            <label className={css.label}>
+              Password
+              <Field
+                type="password"
+                name="password"
+                placeholder="Enter your password"
+                className={css.field}
+              />
+              <ErrorMessage
+                name="password"
+                component="div"
+                className={css.error}
+              />
+            </label>
+            <button type="submit" disabled={isSubmitting} className={css.btn}>
+              Sign In
+            </button>
+          </Form>
+        </div>
       )}
     </Formik>
   );

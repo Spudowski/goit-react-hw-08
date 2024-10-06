@@ -30,38 +30,49 @@ const ContactForm = ({ setIsActive }) => {
       }}
     >
       {() => (
-        <Form className={styles.form}>
-          <div className={styles.container}>
-            <label htmlFor="name">Name:</label>
-            <Field type="text" id="name" name="name" className={styles.field} />
-            <ErrorMessage
-              name="name"
-              component="div"
-              className={styles.error}
-            />
-          </div>
+        <div className={styles.cont}>
+          <Form className={styles.form}>
+            <div className={styles.container}>
+              <label htmlFor="name" className={styles.label}>
+                Name
+              </label>
+              <Field
+                type="text"
+                id="name"
+                name="name"
+                className={styles.field}
+              />
+              <ErrorMessage
+                name="name"
+                component="div"
+                className={styles.error}
+              />
+            </div>
 
-          <div className={styles.container}>
-            <label htmlFor="number">Phone number:</label>
-            <Field
-              type="number"
-              id="number"
-              name="number"
-              className={styles.field}
-            />
-            <ErrorMessage
-              name="number"
-              component="div"
-              className={styles.error}
-            />
-          </div>
+            <div className={styles.container}>
+              <label htmlFor="number" className={styles.label}>
+                Phone number
+              </label>
+              <Field
+                type="number"
+                id="number"
+                name="number"
+                className={styles.field}
+              />
+              <ErrorMessage
+                name="number"
+                component="div"
+                className={styles.error}
+              />
+            </div>
 
-          <button type="submit">
-            {loading ? "Adding contacts..." : "Add contact"}
-          </button>
+            <button type="submit" className={styles.btn}>
+              {loading ? "Adding contacts..." : "Add contact"}
+            </button>
 
-          {error && <p>Error: {error}</p>}
-        </Form>
+            {error && <p>Error: {error}</p>}
+          </Form>
+        </div>
       )}
     </Formik>
   );
